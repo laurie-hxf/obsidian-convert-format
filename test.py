@@ -3,17 +3,24 @@ import re
 import shutil
 import urllib.parse
 
-# 输入和输出目录（请修改为你的路径）
-input_directory = "/Users/laurie/Library/Mobile Documents/iCloud~md~obsidian/Documents/计算机/umich"
-picture_directory = "/Users/laurie/Library/Mobile Documents/iCloud~md~obsidian/Documents/计算机/umich/截屏"
-output_directory = "/Users/laurie/astro-theme-pure/src/content/blog/deeplearing-L5"
-image_copy_directory = "/Users/laurie/astro-theme-pure/src/content/blog/deeplearing-L5"  # 新的文件夹，存放复制的图片
+from numpy.lib.recfunctions import join_by
 
-input_file = "Lecture5 Neural Networks.md"
+input_document = input("请输入笔记目录名:").strip()
+input_file = input("请输入笔记文件名: ").strip()
 output_file = "index.md"
+post_file = input("请输入blog文件名:").strip()
 
-input_filepath = os.path.join(input_directory, input_file)
+# 输入和输出目录（请修改为你的路径）
+input_directory = "/Users/laurie/Library/Mobile Documents/iCloud~md~obsidian/Documents"
+picture_directory = os.path.join("/Users/laurie/Library/Mobile Documents/iCloud~md~obsidian/Documents",input_document,"截屏")
+output_directory = os.path.join("/Users/laurie/astro-theme-pure/src/content/blog",post_file)
+image_copy_directory = output_directory # 新的文件夹，存放复制的图片
+
+
+input_filepath = os.path.join(input_directory,input_document, input_file+".md")
 output_filepath = os.path.join(output_directory, output_file)
+
+text_to_add = "---\ntitle: '"+input_file+"'\n publishDate: \ndescription: ''\ntags:\n - \n - \nlanguage: 'Chinese'\nheroImage: { src: './', color: '#64574D' }\n---\n"
 
 # 确保输出目录存在
 os.makedirs(output_directory, exist_ok=True)
@@ -33,6 +40,8 @@ with open(input_filepath, "r", encoding="utf-8") as file:
 def replace_match(match):
     image_name = match.group(1)  # 获取图片文件名
     encoded_name = image_name.replace(" ", "%20")    # 仅编码空格，保留中文
+
+
 
     # 复制图片到新的目录
     image_path = os.path.join(picture_directory, image_name)  # 原图片路径
@@ -56,6 +65,7 @@ def replace_match(match):
     return f"![alt text](./{encoded_name})"  # 替换格式
 
 
+content = text_to_add + content
 
 new_content = re.sub(pattern, replace_match, content)
 
@@ -63,4 +73,4 @@ new_content = re.sub(pattern, replace_match, content)
 with open(output_filepath, "w", encoding="utf-8") as file:
     file.write(new_content)
 
-print(f"Markdown 图片格式转换完成！所有修改后的文件已保存到 {output_directory}")
+print(os.path.abspath(output_filepath))
