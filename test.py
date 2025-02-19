@@ -20,7 +20,7 @@ image_copy_directory = output_directory # 新的文件夹，存放复制的图�
 input_filepath = os.path.join(input_directory,input_document, input_file+".md")
 output_filepath = os.path.join(output_directory, output_file)
 
-text_to_add = "---\ntitle: '"+input_file+"'\n publishDate: \ndescription: ''\ntags:\n - \n - \nlanguage: 'Chinese'\nheroImage: { src: './', color: '#64574D' }\n---\n"
+text_to_add = "---\ntitle: '"+input_file+"'\npublishDate: \ndescription: ''\ntags:\n - \n - \nlanguage: 'Chinese'\nheroImage: { src: './', color: '#64574D' }\n---\n"
 
 # 确保输出目录存在
 os.makedirs(output_directory, exist_ok=True)
