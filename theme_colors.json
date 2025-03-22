@@ -1,0 +1,38 @@
+{
+  "theme_colors": [
+    { "name": "浅橄榄绿", "hex": "#A7C17D", "category": "绿色系" },
+    { "name": "柔和豆蔻绿", "hex": "#85A389", "category": "绿色系" },
+    { "name": "青柠绿茶", "hex": "#729B79", "category": "绿色系" },
+    { "name": "沉静薄荷绿", "hex": "#5C8D89", "category": "绿色系" },
+    { "name": "温暖松针绿", "hex": "#497D63", "category": "绿色系" },
+
+    { "name": "天空蓝", "hex": "#6C93C1", "category": "蓝色系" },
+    { "name": "雾蓝色", "hex": "#7FA6D6", "category": "蓝色系" },
+    { "name": "海盐蓝", "hex": "#7EA8BE", "category": "蓝色系" },
+    { "name": "深湖蓝", "hex": "#5F8B92", "category": "蓝色系" },
+    { "name": "青瓷蓝", "hex": "#A0C1D1", "category": "蓝色系" },
+
+    { "name": "焦糖杏", "hex": "#E5A86E", "category": "暖色系" },
+    { "name": "珊瑚橙", "hex": "#D68B6F", "category": "暖色系" },
+    { "name": "蜂蜜色", "hex": "#E1A96F", "category": "暖色系" },
+    { "name": "柔雾玫瑰", "hex": "#D68682", "category": "暖色系" },
+    { "name": "南瓜拿铁", "hex": "#C47F6D", "category": "暖色系" },
+
+    { "name": "浆果粉", "hex": "#BE7585", "category": "暖色系" },
+    { "name": "豆沙玫瑰", "hex": "#B37E91", "category": "暖色系" },
+    { "name": "淡柔梅红", "hex": "#C38D9E", "category": "暖色系" },
+    { "name": "复古紫藤", "hex": "#A96A7C", "category": "暖色系" },
+    { "name": "烟熏玫瑰", "hex": "#D4A5A5", "category": "暖色系" },
+
+    { "name": "奶咖色", "hex": "#BDA18A", "category": "中性色" },
+    { "name": "焦糖米杏", "hex": "#C7B08B", "category": "中性色" },
+    { "name": "奶油拿铁", "hex": "#D3B8A1", "category": "中性色" },
+    { "name": "柔和杏仁", "hex": "#E3CAB5", "category": "中性色" },
+    { "name": "法式奶油", "hex": "#EED3B3", "category": "中性色" }
+  ]
+}
+
+
+
+
+
