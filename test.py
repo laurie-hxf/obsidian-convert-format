@@ -52,7 +52,7 @@ else:
     hex_code = "#FFFFFF"  # 默认白色
 
 
-text_to_add = f"---\ntitle: '"+input_file+"'\npublishDate: \ndescription: ''\ntags:\n - \n - \nlanguage: 'Chinese'\nheroImage: { src: './', color:'"+hex_code+"'}\n---\n"
+text_to_add = f"---\ntitle: '"+input_file+"'\npublishDate: \ndescription: ''\ntags:\n - \n - \nlanguage: 'Chinese'\nheroImage: { src: './', color: '"+hex_code+"'}\n---\n"
 
 # 确保输出目录存在
 os.makedirs(output_directory, exist_ok=True)
